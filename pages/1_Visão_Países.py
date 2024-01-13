@@ -94,7 +94,7 @@ df = clean_code( df )
 
 
 
-####### --- Visão Países --- ########
+####### --- Country View --- ########
 
 ## Barra Lateral do dashboard
 
