@@ -100,18 +100,6 @@ df = clean_code( df )
 
 st.header('🌎 Visão Países')
 
-# ## colocando a imagem: 
-# image_path = 'logo.png'
-# image = Image.open(image_path)
-# st.sidebar.image(image, width=120)
-
-# st.sidebar.markdown('# Cury Company')
-# st.sidebar.markdown('## Fastest Delivery in Town')
-# st.sidebar.markdown("""---""")
-
-
-
-# #st.header(date_slider)
 st.sidebar.markdown(""" --- """)
 st.sidebar.markdown("""# Filtros""")
 
@@ -128,11 +116,6 @@ country_options = st.sidebar.multiselect(
 st.sidebar.markdown(""" --- """)
 
 st.sidebar.markdown('#### Created by Marcelo Brandão')
-
-# filtro de data:
-# linhas_selecionadas = df1['Order_Date'] < date_slider
-# df1 = df1.loc[linhas_selecionadas, :]
-
 
 # filtro de paises:
 linhas_selecionadas = df['country_name'].isin(country_options)
@@ -225,8 +208,4 @@ with st.container():
                 fig.data[i].text = fig.data[i].y
         
             st.plotly_chart(fig, use_container_width=True)
-        # with col2:
-        #     st.markdown('#### Média de Preço de um prato para duas pessoas por País')
-        #     df_aux = df1.loc[:, ['ID', 'City', 'Road_traffic_density']].groupby(['City', 'Road_traffic_density']).count().reset_index()
-        #     fig = px.scatter(df_aux, x='City', y='Road_traffic_density', size='ID', color='City')
-        #     st.plotly_chart(fig, use_container_width=True)
+        
